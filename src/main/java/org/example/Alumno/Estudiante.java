@@ -45,8 +45,8 @@ public class Estudiante {
 
     // Metodo para mostrar información
     public String showInfo(){
-        return "My name is: " + this.name + "\n" +
-               "My age is: " + this.age + "\n" +
-               "My midle note is: " + this.averageGrade + "\n";
+        return "Name: " + this.name + "\n" +
+               "Age: " + this.age + "\n" +
+               "Midle note: " + this.averageGrade + "\n";
     }
 }

@@ -26,4 +26,35 @@ public class GestorEstudiantes {
 
         return resultado;
     }
+
+    // Objetivo: Recorrer la lista de estudiantes, comparar sus notas medias y devolver
+    // el estudiante que tenga la mejor nota.
+
+
+    public double mejorNota(){
+
+        //declaro variables.
+        Estudiante mejor = null;
+        double mejorNota = -1;
+        double alumno;
+
+        for (Estudiante mejorAlumno : students){
+
+           if (mejorAlumno.getAverageGrade() > mejorNota){
+               mejorNota = mejorAlumno.getAverageGrade();
+                mejor = mejorAlumno;
+           }
+        }
+        if (mejor != null){
+            System.out.println("El mejor alumno es: \n" + mejor.showInfo());
+        }
+
+        return mejorNota;
+    }
+
+
+
+
+
+
 }

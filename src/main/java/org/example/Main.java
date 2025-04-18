@@ -38,5 +38,7 @@ public class Main {
 
         gestor.notaMedia();
 
+        gestor.mejorNota();
+
     }
 }
