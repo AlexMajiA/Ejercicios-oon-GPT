@@ -1,6 +1,7 @@
 package org.example.Alumno;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Stream;
 
 
@@ -51,14 +52,36 @@ public class GestorEstudiantes {
         return mejorNota;
     }
 
-    // Mostrar los estudiantes que tengan una nota mayor o igual a 7.5
+    // Mostrar los estudiantes que tengan una nota mayor o igual a 8.5
 
     public void bestStudent () {
 
-        System.out.println("Estudiantes con media superior a 7:");
+        System.out.println("Estudiantes con media superior a 8.6:");
         students.stream()
-                .filter(estudiante -> estudiante.getAverageGrade() >= 7)
+                .filter(estudiante -> estudiante.getAverageGrade() >= 8.6)
                 .forEach(estudiante -> System.out.println(estudiante.showInfo()));
+    }
+
+    // Convertir las notas de los estudiantes en calificaciones con letras.
+
+    public void notasConLetras(){
+
+        System.out.println("Conversión de notas en letras:");
+
+        students.stream()
+                .map(estudiante -> {
+                    if (estudiante.getAverageGrade() >= 8){
+                        return "A";
+                    }else if (estudiante.getAverageGrade() >= 7) {
+                        return "B";
+                    } else if (estudiante.getAverageGrade() >= 5) {
+                        return "C";
+                    }else {
+                        return "F";
+                    }
+                })
+                .forEach(calificacion -> System.out.println(calificacion));
+
     }
 
 }

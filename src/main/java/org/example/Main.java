@@ -19,6 +19,7 @@ public class Main {
         Estudiante student5 = new Estudiante(6.4,"Antonio", 70);
         Estudiante student6 = new Estudiante(6.8,"Francisca", 65);
         Estudiante student7 = new Estudiante(9.2,"Daniel", 1);
+        Estudiante student8 = new Estudiante(4.2,"Merino", 31);
 
         // Añado estudiantes al ArrayList
         students.add(student1);
@@ -28,6 +29,7 @@ public class Main {
         students.add(student5);
         students.add(student6);
         students.add(student7);
+        students.add(student8);
 
         // Recorro el ArrayList para imprimir sus valores.
         for (Estudiante estudiante : students){
@@ -41,6 +43,8 @@ public class Main {
         gestor.mejorNota();
 
         gestor.bestStudent();
+
+        gestor.notasConLetras();
 
     }
 }
