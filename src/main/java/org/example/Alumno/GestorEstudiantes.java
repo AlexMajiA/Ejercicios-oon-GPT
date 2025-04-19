@@ -71,16 +71,20 @@ public class GestorEstudiantes {
         students.stream()
                 .map(estudiante -> {
                     if (estudiante.getAverageGrade() >= 8){
-                        return "A";
+                        String name = estudiante.getName();
+                        return name + ": " + "A";
                     }else if (estudiante.getAverageGrade() >= 7) {
-                        return "B";
+                        String name = estudiante.getName();
+                        return name + ": " +"B";
                     } else if (estudiante.getAverageGrade() >= 5) {
-                        return "C";
+                        String name = estudiante.getName();
+                        return name + ": " +"C";
                     }else {
-                        return "F";
+                        String name = estudiante.getName();
+                        return name + ": " + "F";
                     }
                 })
-                .forEach(calificacion -> System.out.println(calificacion));
+                .forEach(calificacion -> System.out.println( calificacion));
 
     }
 
