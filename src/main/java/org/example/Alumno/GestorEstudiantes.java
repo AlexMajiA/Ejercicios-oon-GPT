@@ -1,6 +1,8 @@
 package org.example.Alumno;
 
 import java.util.List;
+import java.util.stream.Stream;
+
 
 public class GestorEstudiantes {
 
@@ -49,9 +51,14 @@ public class GestorEstudiantes {
         return mejorNota;
     }
 
+    // Mostrar los estudiantes que tengan una nota mayor o igual a 7.5
 
+    public void bestStudent () {
 
-
-
+        System.out.println("Estudiantes con media superior a 7:");
+        students.stream()
+                .filter(estudiante -> estudiante.getAverageGrade() >= 7)
+                .forEach(estudiante -> System.out.println(estudiante.showInfo()));
+    }
 
 }
