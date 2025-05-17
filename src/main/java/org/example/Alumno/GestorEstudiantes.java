@@ -84,7 +84,27 @@ public class GestorEstudiantes {
                     }
                 })
                 .forEach(calificacion -> System.out.println( calificacion));
+    }
+
+    public void studentGreaterThan25(){
+
+        System.out.println("Estudiantes mayores de 25 ordenados alfabéticamente:");
+
+        students.stream()
+                .filter(estudiante -> estudiante.getAge() >= 25)
+                .map(Estudiante::getName)
+                .sorted()
+                .forEach(System.out::println);
 
     }
+
+
+
+
+
+
+
+
+
 
 }

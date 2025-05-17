@@ -19,7 +19,7 @@ public class Main {
         Estudiante student5 = new Estudiante(6.4,"Antonio", 70);
         Estudiante student6 = new Estudiante(6.8,"Francisca", 65);
         Estudiante student7 = new Estudiante(9.2,"Daniel", 1);
-        Estudiante student8 = new Estudiante(4.2,"Merino", 31);
+        Estudiante student8 = new Estudiante(4.2,"Jose", 32);
 
         // Añado estudiantes al ArrayList
         students.add(student1);
@@ -45,6 +45,8 @@ public class Main {
         gestor.bestStudent();
 
         gestor.notasConLetras();
+
+        gestor.studentGreaterThan25();
 
     }
 }
