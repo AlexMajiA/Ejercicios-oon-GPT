@@ -98,6 +98,16 @@ public class GestorEstudiantes {
 
     }
 
+    // Mostrar los estudiantes que tengan una nota inferior a 8.5
+
+    public void normalStudent (){
+
+        System.out.println("Estudiantes con media inferior o igual a 8.5");
+        students.stream()
+                .filter(estudiante -> estudiante.getAverageGrade() <= 8.5)
+                .forEach(estudiante -> System.out.println(estudiante.showInfo()));
+
+    }
 
 
 

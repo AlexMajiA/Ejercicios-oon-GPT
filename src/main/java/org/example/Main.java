@@ -48,5 +48,7 @@ public class Main {
 
         gestor.studentGreaterThan25();
 
+        gestor.normalStudent();
+
     }
 }
