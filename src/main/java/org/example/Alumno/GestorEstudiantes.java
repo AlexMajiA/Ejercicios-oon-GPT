@@ -1,7 +1,10 @@
 package org.example.Alumno;
 
+import java.sql.ClientInfoStatus;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 
@@ -110,7 +113,36 @@ public class GestorEstudiantes {
     }
 
 
+    public void agruparEstudiantesCalificacion (){
 
+        System.out.println("Estudiantes agrupados por calificaciones por letras:");
+
+        Map <String, List <Estudiante>> agrupados = students.stream()
+                .collect(Collectors.groupingBy(estudiante ->{
+            double grade = estudiante.getAverageGrade();
+
+                if (grade >= 8){
+                    return "A";
+
+                } else if (grade >=7 ) {
+                    return "B";
+
+                } else if (grade >=5) {
+                    return "C" ;
+
+                } else  {
+                    return "F";
+                }
+             }));
+
+            agrupados.forEach((calificacion, lista)->{
+
+                System.out.println("Nota media: " + calificacion + ":");
+                lista.forEach(est -> System.out.println("- " + est.getName()));
+            });
+
+
+    }
 
 
 

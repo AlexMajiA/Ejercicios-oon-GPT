@@ -50,5 +50,7 @@ public class Main {
 
         gestor.normalStudent();
 
+        gestor.agruparEstudiantesCalificacion();
+
     }
 }
