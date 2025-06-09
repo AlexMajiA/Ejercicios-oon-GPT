@@ -102,17 +102,15 @@ public class GestorEstudiantes {
     }
 
     // Mostrar los estudiantes que tengan una nota inferior a 8.5
-
     public void normalStudent (){
 
         System.out.println("Estudiantes con media inferior o igual a 8.5");
         students.stream()
                 .filter(estudiante -> estudiante.getAverageGrade() <= 8.5)
                 .forEach(estudiante -> System.out.println(estudiante.showInfo()));
-
     }
 
-
+    // Muestra los estudiantes agrupados por su letra de calificación.
     public void agruparEstudiantesCalificacion (){
 
         System.out.println("Estudiantes agrupados por calificaciones por letras:");
@@ -137,7 +135,7 @@ public class GestorEstudiantes {
 
             agrupados.forEach((calificacion, lista)->{
 
-                System.out.println("Nota media: " + calificacion + ":");
+                System.out.println("Nota media " + calificacion + ":");
                 lista.forEach(est -> System.out.println("- " + est.getName()));
             });
 
@@ -145,7 +143,30 @@ public class GestorEstudiantes {
     }
 
 
+    // Cuenta los estudiantes según su calificación obtenida.
+    public void contadorCalificaciones() {
 
+        Map <String, List<Estudiante>> agrupados = students.stream()
+                .collect(Collectors.groupingBy(estudiante ->{
+                            Double grade = estudiante.getAverageGrade();
+
+                            if (grade >=8){
+                                return "A";
+                            } else if (grade >=7) {
+                                return "B";
+                            } else if (grade>=5) {
+                                return "C";
+                            }else {
+                                return "F";
+                            }
+                }));
+
+                agrupados.forEach((letra,lista)->{
+                    System.out.println("Calificación " + letra + ": " + lista.size() + " estudiantes.");
+
+        });
+
+    }
 
 
 

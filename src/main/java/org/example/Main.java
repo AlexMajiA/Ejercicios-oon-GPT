@@ -31,26 +31,28 @@ public class Main {
         students.add(student7);
         students.add(student8);
 
-        // Recorro el ArrayList para imprimir sus valores.
-        for (Estudiante estudiante : students){
-            System.out.println(estudiante.showInfo());
-        }
+     // Recorro el ArrayList para imprimir sus valores.
+    //    for (Estudiante estudiante : students){
+     //       System.out.println(estudiante.showInfo());
+   //   }
 
         GestorEstudiantes gestor = new GestorEstudiantes(students);
 
-        gestor.notaMedia();
+       // gestor.notaMedia();
 
-        gestor.mejorNota();
+       // gestor.mejorNota();
 
-        gestor.bestStudent();
+       // gestor.bestStudent();
 
-        gestor.notasConLetras();
+       // gestor.notasConLetras();
 
-        gestor.studentGreaterThan25();
+       // gestor.studentGreaterThan25();
 
-        gestor.normalStudent();
+       // gestor.normalStudent();
 
-        gestor.agruparEstudiantesCalificacion();
+       // gestor.agruparEstudiantesCalificacion();
+
+        gestor.contadorCalificaciones();
 
     }
 }
