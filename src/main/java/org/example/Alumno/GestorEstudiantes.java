@@ -170,11 +170,14 @@ public class GestorEstudiantes {
 
     //Imprimir solo los nombres de los estudiantes con nota media superior a 7, ordenados alfabéticamente
     public void orderStudentsByAsc(){
-    
+
+        //Creo la lista para guardar los nombres
         List<String> names = new ArrayList<>();
 
+        //recorro la lista con la ocndición de que sea la nota >7
         for (Estudiante estudiante:students){
             if(estudiante.getAverageGrade()>7) {
+                //obtengo el nombre y lo añado.
                 String name = estudiante.getName();
                 names.add(name);
             }
@@ -182,8 +185,8 @@ public class GestorEstudiantes {
         //Ordeno la lista alfeticamente.
         Collections.sort(names);
 
+        //Recorro los nombres para imprimirlos por separado.
         for (String name:names){
-
             System.out.println(name);
         }
     }
