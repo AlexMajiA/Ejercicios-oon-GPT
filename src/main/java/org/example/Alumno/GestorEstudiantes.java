@@ -1,11 +1,12 @@
 package org.example.Alumno;
 
 import java.sql.ClientInfoStatus;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static java.util.Collections.sort;
 
 
 public class GestorEstudiantes {
@@ -165,9 +166,26 @@ public class GestorEstudiantes {
                     System.out.println("Calificación " + letra + ": " + lista.size() + " estudiantes.");
 
         });
-
     }
 
+    //Imprimir solo los nombres de los estudiantes con nota media superior a 7, ordenados alfabéticamente
+    public void orderStudentsByAsc(){
+    
+        List<String> names = new ArrayList<>();
 
+        for (Estudiante estudiante:students){
+            if(estudiante.getAverageGrade()>7) {
+                String name = estudiante.getName();
+                names.add(name);
+            }
+        }
+        //Ordeno la lista alfeticamente.
+        Collections.sort(names);
+
+        for (String name:names){
+
+            System.out.println(name);
+        }
+    }
 
 }

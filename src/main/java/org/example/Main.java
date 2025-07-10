@@ -52,7 +52,8 @@ public class Main {
 
        // gestor.agruparEstudiantesCalificacion();
 
-        gestor.contadorCalificaciones();
+      //  gestor.contadorCalificaciones();
 
+        gestor.orderStudentsByAsc();
     }
 }
