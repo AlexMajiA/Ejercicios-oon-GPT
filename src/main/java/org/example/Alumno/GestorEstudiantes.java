@@ -174,7 +174,7 @@ public class GestorEstudiantes {
         //Creo la lista para guardar los nombres
         List<String> names = new ArrayList<>();
 
-        //recorro la lista con la ocndición de que sea la nota >7
+        //recorro la lista con la condición de que sea la nota >7
         for (Estudiante estudiante:students){
             if(estudiante.getAverageGrade()>7) {
                 //obtengo el nombre y lo añado.
@@ -182,7 +182,7 @@ public class GestorEstudiantes {
                 names.add(name);
             }
         }
-        //Ordeno la lista alfeticamente.
+        //Ordeno la lista alfabéticamente.
         Collections.sort(names);
 
         //Recorro los nombres para imprimirlos por separado.
@@ -190,5 +190,25 @@ public class GestorEstudiantes {
             System.out.println(name);
         }
     }
+
+
+    //ejercicio 11: Imprimir el nombre y la nota media del estudiante con mejor nota.
+    public void bestStudent2(){
+
+        double mejorNota = 1;
+        Estudiante mejorEstudiante = null;
+
+        for (Estudiante estudiante:students){
+
+            if (estudiante.getAverageGrade() > mejorNota){
+                mejorNota = estudiante.getAverageGrade();
+                mejorEstudiante = estudiante;
+            }
+        }
+        System.out.println("Mejor estudiante: " + mejorEstudiante.getName());
+        System.out.println("Nota media: " + mejorEstudiante.getAverageGrade());
+
+    }
+
 
 }
