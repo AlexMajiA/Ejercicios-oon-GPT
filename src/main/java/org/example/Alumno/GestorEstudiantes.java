@@ -55,8 +55,7 @@ public class GestorEstudiantes {
         return mejorNota;
     }
 
-    // Mostrar los estudiantes que tengan una nota mayor o igual a 8.5
-
+    //Ejercicio 4: Mostrar los estudiantes que tengan una nota mayor o igual a 8.6
     public void bestStudent () {
 
         System.out.println("Estudiantes con media superior a 8.6:");
@@ -65,8 +64,7 @@ public class GestorEstudiantes {
                 .forEach(estudiante -> System.out.println(estudiante.showInfo()));
     }
 
-    // Convertir las notas de los estudiantes en calificaciones con letras.
-
+    //Ejercicio 5: Convertir las notas de los estudiantes en calificaciones con letras.
     public void notasConLetras(){
 
         System.out.println("Conversión de notas en letras:");
@@ -89,6 +87,7 @@ public class GestorEstudiantes {
                 .forEach(calificacion -> System.out.println( calificacion));
     }
 
+    //Ejercicio 6:
     public void studentGreaterThan25(){
 
         System.out.println("Estudiantes mayores de 25 ordenados alfabéticamente:");
@@ -101,7 +100,7 @@ public class GestorEstudiantes {
 
     }
 
-    // Mostrar los estudiantes que tengan una nota inferior a 8.5
+    //Ejercicio 7: Mostrar los estudiantes que tengan una nota inferior a 8.5
     public void normalStudent (){
 
         System.out.println("Estudiantes con media inferior o igual a 8.5");
@@ -110,7 +109,7 @@ public class GestorEstudiantes {
                 .forEach(estudiante -> System.out.println(estudiante.showInfo()));
     }
 
-    // Muestra los estudiantes agrupados por su letra de calificación.
+    //Ejercicio 8: Muestra los estudiantes agrupados por su letra de calificación.
     public void agruparEstudiantesCalificacion (){
 
         System.out.println("Estudiantes agrupados por calificaciones por letras:");
@@ -142,7 +141,7 @@ public class GestorEstudiantes {
 
     }
 
-    // Cuenta los estudiantes según su calificación obtenida.
+    //Ejercicio 9: Cuenta los estudiantes según su calificación obtenida.
     public void contadorCalificaciones() {
 
         Map <String, List<Estudiante>> agrupados = students.stream()
@@ -166,7 +165,7 @@ public class GestorEstudiantes {
         });
     }
 
-    //Imprimir solo los nombres de los estudiantes con nota media superior a 7, ordenados alfabéticamente
+    //Ejercicio 10: Imprimir solo los nombres de los estudiantes con nota media superior a 7, ordenados alfabéticamente
     public void orderStudentsByAsc(){
 
         //Creo la lista para guardar los nombres
@@ -181,7 +180,7 @@ public class GestorEstudiantes {
             }
         }
         //Ordeno la lista alfabéticamente.
-        Collections.sort(names);
+        sort(names);
 
         //Recorro los nombres para imprimirlos por separado.
         for (String name:names){
@@ -189,7 +188,7 @@ public class GestorEstudiantes {
         }
     }
 
-    //ejercicio 11: Imprimir el nombre y la nota media del estudiante con mejor nota.
+    //Ejercicio 11: Imprimir el nombre y la nota media del estudiante con mejor nota.
     public void bestStudent2(){
 
         double mejorNota = 1;
@@ -207,7 +206,7 @@ public class GestorEstudiantes {
 
     }
 
-    //ejercicio 12: Imprimir el número de estudiantes que tienen una nota media superior a 7.
+    //Ejercicio 12: Imprimir el número de estudiantes que tienen una nota media superior a 7.
     public void studentSeven(){
         int contador = 0;
         for (Estudiante estudiante : students){
@@ -215,10 +214,25 @@ public class GestorEstudiantes {
                 contador++;
             }
         }
-        System.out.println("El numero de alumnos es: " + contador);
+        System.out.println("El numero de estudiantes con nota superior a 7 es: " + contador);
     }
 
-
+    //Ejercicio 13: Imprimir los datos del estudiante con la peor nota media.
+    public void badStudent(){
+       double peorNota = 10;
+       Estudiante peorEstudiante = null;
+        for (Estudiante estudiante : students){
+            if (estudiante.getAverageGrade()<peorNota){
+                peorNota = estudiante.getAverageGrade();
+                peorEstudiante = estudiante;
+            }
+        }
+        if (peorEstudiante != null){
+            System.out.println(peorEstudiante.showInfo());
+        }else{
+            System.out.println("No hay estudiantes en la lista");
+        }
+    }
 
 
 }

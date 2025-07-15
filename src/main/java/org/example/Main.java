@@ -59,6 +59,8 @@ public class Main {
 
        // gestor.bestStudent2();
 
-        gestor.studentSeven();
+       // gestor.studentSeven();
+
+        gestor.badStudent();
     }
 }
