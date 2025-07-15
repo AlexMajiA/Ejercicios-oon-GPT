@@ -53,10 +53,12 @@ public class Main {
 
        // gestor.agruparEstudiantesCalificacion();
 
-       //  gestor.contadorCalificaciones();
+       // gestor.contadorCalificaciones();
 
        // gestor.orderStudentsByAsc();
 
-       gestor.bestStudent2();
+       // gestor.bestStudent2();
+
+        gestor.studentSeven();
     }
 }

@@ -36,7 +36,6 @@ public class GestorEstudiantes {
 
     // Objetivo: Recorrer la lista de estudiantes, comparar sus notas medias y devolver
     // el estudiante que tenga la mejor nota.
-
     public double mejorNota(){
 
         //declaro variables.
@@ -143,7 +142,6 @@ public class GestorEstudiantes {
 
     }
 
-
     // Cuenta los estudiantes según su calificación obtenida.
     public void contadorCalificaciones() {
 
@@ -191,7 +189,6 @@ public class GestorEstudiantes {
         }
     }
 
-
     //ejercicio 11: Imprimir el nombre y la nota media del estudiante con mejor nota.
     public void bestStudent2(){
 
@@ -209,6 +206,19 @@ public class GestorEstudiantes {
         System.out.println("Nota media: " + mejorEstudiante.getAverageGrade());
 
     }
+
+    //ejercicio 12: Imprimir el número de estudiantes que tienen una nota media superior a 7.
+    public void studentSeven(){
+        int contador = 0;
+        for (Estudiante estudiante : students){
+            if (estudiante.getAverageGrade()>7){
+                contador++;
+            }
+        }
+        System.out.println("El numero de alumnos es: " + contador);
+    }
+
+
 
 
 }
