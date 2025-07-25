@@ -1,6 +1,7 @@
 package org.example.Alumno;
 
 import java.sql.ClientInfoStatus;
+import java.text.DecimalFormat;
 import java.util.*;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
@@ -233,6 +234,30 @@ public class GestorEstudiantes {
             System.out.println("No hay estudiantes en la lista");
         }
     }
+
+    //Ejercicio 14: Imprimir el promedio de todas las notas medias de los estudiantes, formateado a dos decimales.
+    public void promedioNotas(){
+
+        double counter = 0;
+        double notas = 0;
+
+        for (Estudiante estudiante : students){
+            notas += estudiante.getAverageGrade();
+            counter++;
+        }
+        double promedio = (notas/counter);
+        DecimalFormat formato = new DecimalFormat("0.00");
+        String promedioFormateado = formato.format(promedio);
+
+
+        if (counter > 0) {
+            System.out.println("La nota promedio de los " + (int)counter + " es: " + promedioFormateado);
+        }else {
+            System.out.println("No hay estudiantes en la lista.");
+        }
+    }
+
+
 
 
 }

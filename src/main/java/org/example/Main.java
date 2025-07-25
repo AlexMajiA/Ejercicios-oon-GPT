@@ -61,6 +61,8 @@ public class Main {
 
        // gestor.studentSeven();
 
-        gestor.badStudent();
+       // gestor.badStudent();
+
+        gestor.promedioNotas();
     }
 }
