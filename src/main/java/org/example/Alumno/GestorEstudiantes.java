@@ -283,4 +283,25 @@ public class GestorEstudiantes {
         System.out.println("Estudiantes con nota superior o igual a 9: " + counter);
     }
 
+    //Modifico la estructura de los estudiantes y añado atributos para continuar con ejercicios más complejos.
+
+    //Ejercicio 17: Mostrar estudiantes matriculados: Recorrer la lista y mostrar solo los que tienen matriculado = true.
+    public void onlyMatriculados(){
+
+
+    }
+
+
+
+
+    //Ejercicio 18:Buscar estudiante por email: Recibir un email como parámetro y devolver el estudiante si existe (Optional).
+    //Ejercicio 19:Filtrar estudiantes por asignatura: Pasar el nombre de una asignatura y mostrar los estudiantes que la cursan.
+    //Ejercicio 20: Contar estudiantes por asignatura: Mostrar cuántos estudiantes cursan cada asignatura (Map<String, Long>).
+    //Ejercicio 21: Mejor estudiante por asignatura: Pasar una asignatura y mostrar el estudiante con mejor nota que la curse.
+    //Ejercicio 22:Top N estudiantes por nota media: Pasar un número N y mostrar los N mejores estudiantes ordenados por nota descendente.
+    //Ejercicio 23:Promedio de edad: Calcular y mostrar la edad media de todos los estudiantes.
+    //Ejercicio 24:Estudiantes que cumplen años en un mes concreto: Pasar un Month y mostrar los estudiantes cuyo cumpleaños cae en ese mes.
+    //Ejercicio 25:Contar estudiantes matriculados vs no matriculados: Mostrar cuántos están matriculados y cuántos no.
+    //Ejercicio 26:Ordenar estudiantes por nota y luego por edad: Mostrar la lista ordenada primero por nota descendente y, en caso de empate, por edad ascendente.
+
 }
