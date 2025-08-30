@@ -270,11 +270,17 @@ public class GestorEstudiantes {
         System.out.println("El numero de estudiantes con nota inferior a 5 es: " + counter);
     }
 
+    //Ejercicio 16: Imprimir cuántos estudiantes tienen una nota media superior o igual a 9 (matrícula de honor).
+    public void superiorIgualnueve(){
 
+       int counter = 0;
 
-
-
-
-
+       for (Estudiante estudiante : students){
+           if (estudiante.getAverageGrade() >=9){
+               counter++;
+           }
+       }
+        System.out.println("Estudiantes con nota superior o igual a 9: " + counter);
+    }
 
 }
