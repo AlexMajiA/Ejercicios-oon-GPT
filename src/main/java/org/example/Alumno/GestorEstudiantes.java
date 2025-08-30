@@ -238,7 +238,7 @@ public class GestorEstudiantes {
     //Ejercicio 14: Imprimir el promedio de todas las notas medias de los estudiantes, formateado a dos decimales.
     public void promedioNotas(){
 
-        double counter = 0;
+        int counter = 0;
         double notas = 0;
 
         for (Estudiante estudiante : students){
@@ -256,6 +256,23 @@ public class GestorEstudiantes {
             System.out.println("No hay estudiantes en la lista.");
         }
     }
+
+    //Ejercicio 15: Imprimir cuántos estudiantes tienen una nota media inferior a 5 (es decir, cuántos han suspendido).
+    public void inferiorCinco(){
+
+         int counter = 0;
+
+         for (Estudiante estudiante : students){
+             if (estudiante.getAverageGrade()<5){
+                 counter++;
+             }
+         }
+        System.out.println("El numero de estudiantes con nota inferior a 5 es: " + counter);
+    }
+
+
+
+
 
 
 

@@ -63,6 +63,8 @@ public class Main {
 
        // gestor.badStudent();
 
-        gestor.promedioNotas();
+       // gestor.promedioNotas();
+
+        gestor.inferiorCinco();
     }
 }
