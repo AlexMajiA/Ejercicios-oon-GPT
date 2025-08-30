@@ -84,7 +84,9 @@ public class Main {
 
        // gestor.inferiorCinco();
 
-        gestor.superiorIgualnueve();
+       // gestor.superiorIgualnueve();
+
+        gestor.onlyMatriculados();
 
 
     }

@@ -288,6 +288,14 @@ public class GestorEstudiantes {
     //Ejercicio 17: Mostrar estudiantes matriculados: Recorrer la lista y mostrar solo los que tienen matriculado = true.
     public void onlyMatriculados(){
 
+        System.out.println("Estudiantes matriculados:");
+
+        for (Estudiante estudiante: students){
+            if(estudiante.isMatriculado()){
+                System.out.println(estudiante.showInfo());
+            }
+        }
+
 
     }
 
