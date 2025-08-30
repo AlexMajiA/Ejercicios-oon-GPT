@@ -288,21 +288,16 @@ public class GestorEstudiantes {
     //Ejercicio 17: Mostrar estudiantes matriculados: Recorrer la lista y mostrar solo los que tienen matriculado = true.
     public void onlyMatriculados(){
 
-        System.out.println("Estudiantes matriculados:");
-
-        for (Estudiante estudiante: students){
-            if(estudiante.isMatriculado()){
-                System.out.println(estudiante.showInfo());
-            }
-        }
-
-
+      students.stream()
+              .filter(estudiante -> estudiante.isMatriculado())
+              .forEach(estudiante -> System.out.println(estudiante.showInfo()));
     }
 
-
-
-
     //Ejercicio 18:Buscar estudiante por email: Recibir un email como parámetro y devolver el estudiante si existe (Optional).
+
+
+
+
     //Ejercicio 19:Filtrar estudiantes por asignatura: Pasar el nombre de una asignatura y mostrar los estudiantes que la cursan.
     //Ejercicio 20: Contar estudiantes por asignatura: Mostrar cuántos estudiantes cursan cada asignatura (Map<String, Long>).
     //Ejercicio 21: Mejor estudiante por asignatura: Pasar una asignatura y mostrar el estudiante con mejor nota que la curse.
