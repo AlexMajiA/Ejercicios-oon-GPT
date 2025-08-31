@@ -1,5 +1,7 @@
 package org.example.Alumno;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.sql.ClientInfoStatus;
 import java.text.DecimalFormat;
 import java.util.*;
@@ -294,7 +296,17 @@ public class GestorEstudiantes {
     }
 
     //Ejercicio 18:Buscar estudiante por email: Recibir un email como parámetro y devolver el estudiante si existe (Optional).
+    public Optional<Estudiante> findStudentByMail( String email){
 
+
+        for (Estudiante e : students){
+            if (e.getEmail().equals(email)){
+                return Optional.of(e);
+            }
+        }
+
+        return Optional.empty();
+    }
 
 
 

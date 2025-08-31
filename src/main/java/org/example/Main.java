@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 public class Main {
     public static void main(String[] args) {
@@ -86,7 +87,15 @@ public class Main {
 
        // gestor.superiorIgualnueve();
 
-        gestor.onlyMatriculados();
+       // gestor.onlyMatriculados();
+
+        Optional<Estudiante> encontrado = gestor.findStudentByMail("marcos@example.com");
+        if (encontrado.isPresent()){
+            System.out.println(encontrado.get().showInfo());
+        }else {
+            System.out.println("Student not found");
+        }
+
 
 
     }
