@@ -296,16 +296,18 @@ public class GestorEstudiantes {
     }
 
     //Ejercicio 18:Buscar estudiante por email: Recibir un email como parámetro y devolver el estudiante si existe (Optional).
-    public Optional<Estudiante> findStudentByMail( String email){
+    public void findStudentByMail( String email){
 
+        Optional <Estudiante> resultado = students.stream()
+                .filter(estudiante -> estudiante.getEmail().equals(email))
+                .findFirst();
 
-        for (Estudiante e : students){
-            if (e.getEmail().equals(email)){
-                return Optional.of(e);
-            }
-        }
+        resultado.ifPresentOrElse(estudiante -> {System.out.println(estudiante.showInfo()); },
+                ()->{
+                    System.out.println("student not found");
+                }
+                );
 
-        return Optional.empty();
     }
 
 

@@ -89,12 +89,7 @@ public class Main {
 
        // gestor.onlyMatriculados();
 
-        Optional<Estudiante> encontrado = gestor.findStudentByMail("marcos@example.com");
-        if (encontrado.isPresent()){
-            System.out.println(encontrado.get().showInfo());
-        }else {
-            System.out.println("Student not found");
-        }
+        gestor.findStudentByMail("jose@example.com");
 
 
 
